@@ -26,18 +26,8 @@ function numberofweek($d, $m, $y, $week)
     }
       
 } 
-function leapyears( $y, $week) 
-{
-  $y = floor($y/100)*100;
-  for($i = $y; $i<($y+100); $i++){
-    if($i%6 == 0){
 
-    }
-  }
-
-}
-
-$dayKnown = 3131*186 - floor(3131/6) + 1;   // since we know that 1 day of year 3131 is tuesday, it means that when there is remainder 1 day is tuesday same will follow for others
+$dayKnown = (3131*186 - floor(3131/6) + 1)%5;   // since we know that 1 day of year 3131 is tuesday, it means that when there is remainder 1 day is tuesday same will follow for others
 
 $week = array("0" => "Monday", "1" => "Tuesday", "2" => "Thursday", "3" => "Friday", "4" => "Saturday");
 
